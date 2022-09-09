@@ -1,0 +1,15 @@
+<div class="row mt-5">
+  <div class="col-lg-6 offset-lg-3">
+    <h2 class="text-center tituloClase">Ingrese Presupuesto</h2>
+    <div class="card">
+      <div class="card-body">
+        <div *ngIf="cantidadIncorrecta" class="text-center mb-3">
+          <span class="badge bg-danger textError">EL PRESUPUESTO DEBE SER MAYOR A CERO</span>
+        </div>
+        <input type="number" [(ngModel)]="cantidad" class="form-control form-control-lg"
+          placeholder="Ingrese su presupuesto" />
+        <button (click)="agregar()" style="width: 100%;" class="btn btn-secondary btn-lg mt-2">ACEPTAR</button>
+      </div>
+    </div>
+  </div>
+</div>
